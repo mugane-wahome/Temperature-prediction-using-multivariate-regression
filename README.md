@@ -92,8 +92,7 @@ skewed and if positive, it indicates that the errors terms are positively skewed
 indicated that the distribution of residuals was approximately normal. This meant that the error terms
 were normally distributed
 ## Q-Q plot
-![](https://github.com/mugane-wahome/Temperature-prediction-using-multivariate-regression/blob/main/new%20scatter%20plot.png)
-
+![](https://github.com/mugane-wahome/Temperature-prediction-using-multivariate-regression/blob/main/Q-Q%20plot%20of%20residuals.png)
 ## Anderson darling test
 The p-value of the residuals was 2.2e-16  which was less than 0.05, thus the null hypothesis that the residuals are not normally distributed was rejected
 
