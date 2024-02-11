@@ -35,7 +35,7 @@ regression model were greater than the critical value of the t-distribution at t
 4. To assess the accuracy of the predicted values.
 
 # Methodology
-##  Multiple Linear Regression Model
+
 Multiple regression analysis is a statistical analysis technique model that determines the relationship between a response variable and some combination of two or more explanatory variables. The
 model performed in observance of five assumptions. They include, normality assumption in that the
 model assumes that the residuals are normally distributed. Non-normally distributed residuals( highly
@@ -52,11 +52,38 @@ Chapter 3. Methodology 12
 model describes how a response variable depends linearly on a number of predictor variables. Let Yi
 be the response variable and X1,X2,...,Xk be the explanatory variables.
 
+##  Estimation of Parameters
+The parameters of the fitted multiple linear regression model were estimated using the ordinary least
+squares method. Among the independent variables, pollution exhibited a strong negative relationship
+with the dependent variable, temperature, with a coefficient estimate of -0.02488. This indicated
+that as pollution levels increase temperature levels tend to decrease. In contrast, dew had a positive
+relationship with temperature, represented by a coefficient estimate of 0.4599, suggesting that higher
+dew levels correspond to higher temperatures. Pressure demonstrated an inverse relationship, as a
+decrease in pressure, represented by the coefficient estimate of -0.5005, was associated with lower
+temperatures. Wind speed exhibited a positive correlation with temperature, indicated by a coefficient
+estimate of 0.00997, meaning that higher wind speeds are linked to higher temperatures. Snow size
+and rainfall both had negative associations with temperature, with coefficient estimates of -0.6759
+25
+Chapter 4. Results and Discussions 26
+and -0.5329, respectively, implying that larger snowfall and increased rainfall contribute to lower
+temperature
 
+The multiple linear regression model is of the form;
+temperature =522.6−0.02488pollution+0.4599dew
+−0.5005press+0.00997wnd spd
+−0.6759snow−0.5329rain
 
+The table below is of the parameter estimates for the multiple linear regression model.
+Variable Estimate Std. Error Pr(> |t|)
+(Intercept) 5.23e+02 4.07e+00 < 2e−16
+pollution -2.49e-02 2.88e-4 < 2e−16
+dew 4.60e-01 2.96e-3 < 2e−16
+press -5.01e-01 4.00e-3 < 2e−16
+wnd spd 9.97e-03 5.45e-4 < 2e−16
+snow -6.76e-01 3.36e-2 < 2e−16
+rain -5.33e-01 1.82e-2 < 2e−16
 
-
-
+##  Model adequacy
 
 
 
