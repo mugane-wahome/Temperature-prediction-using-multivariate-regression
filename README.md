@@ -83,7 +83,7 @@ in a manner that suggested an approximate linear relationship, indicating that c
 # Normality
 The test for normality was examined using a histogram, a Q-Q plot of residuals and using Anderson
 ## Histogram
-![](https://github.com/mugane-wahome/Temperature-prediction-using-multivariate-regression/blob/main/new%20scatter%20plot.png)
+![](https://github.com/mugane-wahome/Temperature-prediction-using-multivariate-regression/blob/main/histogram%20of%20residuals.png)
 The above  is a histogram of the error terms. The figure shows that the error terms are normally
 distributed. For a histogram with normally distributed errors terms, the shape of the histogram is
 always symmetric such that the mode, mean and the median are identical. When the skewedeness is
