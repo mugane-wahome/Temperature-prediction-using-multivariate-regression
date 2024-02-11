@@ -73,49 +73,87 @@ temperature =522.6−0.02488pollution+0.4599dew
 −0.5005press+0.00997wnd spd
 −0.6759snow−0.5329rain
 
-The table below is of the parameter estimates for the multiple linear regression model.
-Variable Estimate Std. Error Pr(> |t|)
-(Intercept) 5.23e+02 4.07e+00 < 2e−16
-pollution -2.49e-02 2.88e-4 < 2e−16
-dew 4.60e-01 2.96e-3 < 2e−16
-press -5.01e-01 4.00e-3 < 2e−16
-wnd spd 9.97e-03 5.45e-4 < 2e−16
-snow -6.76e-01 3.36e-2 < 2e−16
-rain -5.33e-01 1.82e-2 < 2e−16
 
 ##  Model adequacy
+#Linearity
+![](https://github.com/mugane-wahome/Temperature-prediction-using-multivariate-regression/blob/main/new%20scatter%20plot.png)
+The above  is scatter plot for the relationship between the temperature and the explanatory variables
+.The scatter plots visually illustrated the relationship between temperature and the explanatory variables, providing a clear representation of their associations. The data points on the plot were dispersed
+in a manner that suggested an approximate linear relationship, indicating that changes in the explanatory variables are accompanied by corresponding changes in temperature
+# Normality
+The test for normality was examined using a histogram, a Q-Q plot of residuals and using Anderson
+## Histogram
+![](https://github.com/mugane-wahome/Temperature-prediction-using-multivariate-regression/blob/main/new%20scatter%20plot.png)
+The above  is a histogram of the error terms. The figure shows that the error terms are normally
+distributed. For a histogram with normally distributed errors terms, the shape of the histogram is
+always symmetric such that the mode, mean and the median are identical. When the skewedeness is
+0 then the error terms are said to be symmetrical, when negative, it indicate that they are negatively
+skewed and if positive, it indicates that the errors terms are positively skewed. A skewness of 0.000391
+indicated that the distribution of residuals was approximately normal. This meant that the error terms
+were normally distributed
+## Q-Q plot
+![](https://github.com/mugane-wahome/Temperature-prediction-using-multivariate-regression/blob/main/new%20scatter%20plot.png)
+
+## Anderson darling test
+The p-value of the residuals was 2.2e-16  which was less than 0.05, thus the null hypothesis that the residuals are not normally distributed was rejected
+
+## Durbin Watson test
+The Durbin-Watson test statistic was 0.11778. This value is significantly lower than 2, suggesting the
+presence of positive autocorrelation in the residuals. A p-value of 2.2e-16 was obtained which lead to
+the rejection of the null hypothesis that there is no autocorrelation.
+
+## Breusch-Pagan test
+The Breusch-Pagan test for homoscedasticity had a p-value of 2.2e − 16 which was less than the
+level of significance of 0.05.This led to rejection of the null hypothesis that residuals do not have a
+constant variance and the alternative hypothesis that residuals have a constant variance was accepted
+ It was concluded that there was homoscedasticity in the multiple linear regression model.
+
+### Variance inflation factor
+The Variance Inflation Factor (VIF) values for the explanatory variables in the regression model provided insights into the extent of multicollinearity among predictors. The ’pollution’ variable exhibited
+little to no multicollinearity with a VIF close to 1. However, the ’dew’ and ’pressure’ variables had
+moderate levels of multicollinearity, as indicated by VIF values of 2.804533 and 2.603112, respectively. Conversely, ’wind speed,’ ’snow,’ and ’rain’ had VIF values close to 1, suggesting minimal
+multicollinearity. While some level of multicollinearity is present, the VIF values did not exceed
+critical thresholds, indicating that the impact of correlated predictors on the variance of estimated
+coefficients was relatively modes
+
+### F test
+The critical value of the F-distribution was 3.84185. Since the F-ratio was 30924, which was greater
+than the critical value, the null hypothesis was rejected and it was concluded that the regression model
+was significan
+
+### R squared and adjusted R squared
+R-squared measures the proportion of variance that a regression model explains. In this study a value
+of 0.8090451 was obtained as the R
+2 meaning that 80.90451% of the variance in the temperature levels
+prediction was explained by the multiple linear regression model. The R
+2
+increases with the increase
+in variables without preventing possibilities of over fitting thus it is the best to employ. Adjusted R
+2
+controls for each additional predictor added (to prevent from over fitting), so it may not increase as
+you add more variables. The value of the adjusted R
+2 obtained was 0.809019 which was a relatively
+smaller percentage than the R
+2
+.Those values were relatively bigger thus concluded that multiple linear
+regression model was the best for predicting temperature levels.
+
+### t test
+The null hypothesis was rejected for all of the independent variables, since the t-statistics for all of the
+independent variables in the regression model were greater than the critical value of the t-distribution
+at the 5% significance level. This meant that all of the independent variables were statistically significant and had a non-zero effect on the dependent variable temperature.
+
+### RMSE
+
+The dataset was divided into two parts, with 80% of the data used for training and the remaining 20%
+used for testing. The model yielded a relatively low root mean square error RMSE of 5.4837. This
+low RMSE value indicates the reliability of the model’s temperature level predictions. As a result, the
+model proves to be suitable for predicting temperature levels.
+
+## Conclusion
+An accurate prediction of temperature can help organization and governments to improve on planning,
+reduce risk, improve efficiency and protect human health and well-being. In the study temperature was
+being predicted using multiple linear regression model. From the results obtained it was concluded
+that multiple linear is a good model to use in temperature prediction.
 
 
-
-* Witness the power of the CatBoost classifier in accurately predicting customer churn based on a comprehensive set of features.
-* Delve into the intricacies of model performance through a detailed confusion matrix visualization, providing a clear picture of true positives, true negatives, false positives, and false negatives.
-* Gain insights into precision, recall, and F1-score, allowing a nuanced understanding of the model's performance across different metrics.
-* Explore the Receiver Operating Characteristic (ROC) curve, visualizing the trade-off between true positive rate and false positive rate, complemented by the AUC-ROC score for a holistic evaluation of model efficacy.
-
-## How to work on the project?
-
-### Step 1: Download the Dataset
-Download the <a href="https://github.com/Atharva-Parkar/Customer-Churn-Prediction-with-Machine-Learning/blob/main/Customer_Churn.csv">Customer Churn Dataset</a> from the repository.
-
-### Step 2: Upload the Dataset to Google Drive
-Upload the downloaded dataset to your Google Drive. This ensures convenient access to the dataset during the project.
-
-### Step 3: Open the Jupyter Notebook
-Open the provided <a href="https://github.com/Atharva-Parkar/Customer-Churn-Prediction-with-Machine-Learning/blob/main/Customer_Churn_Prediction.ipynb">Jupyter Notebook</a> on your local machine or in a Google Colab environment.
- 
-### Step 4: Configure Google Drive Connection
-If using Google Colab, configure Google Drive connection by following the instructions in the notebook. This allows access to the dataset stored in Google Drive.
-
-### Step 5: Run the Jupyter Notebook
-Execute the notebook cells sequentially to perform tasks such as loading the dataset, preprocessing data, training the CatBoost model, and evaluating model performance.
-
-### Step 6: Explore Model Insights
-Analyze accuracy, confusion matrix, classification report, and AUC-ROC curve visualizations within the notebook to gain insights into customer churn predictions.
-
-### Step 7: Customize and Experiment
-Modify the notebook to experiment with different features, models, or preprocessing techniques.
-Iterate on the project to enhance its capabilities and tailor it to your specific dataset or business requirements.
-
-## Find a bug?
-
-If you encounter any issues or wish to suggest improvements for this project, kindly submit an issue using the "Issues" tab above. In case you'd like to contribute a fix, please submit a pull request (PR) and reference the corresponding issue you created.
